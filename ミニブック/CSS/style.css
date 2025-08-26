@@ -1,0 +1,126 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(to bottom, #f9f9f9, #f2f2f2);
+}
+header {
+  background: linear-gradient(to right, #ff8a80, #ff80ab);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+nav {
+  background: #ff80ab;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 10px auto;
+}
+section h2 {
+  font-size: 1.5rem;
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+section img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  height: auto;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  z-index: 1000;
+  display: none;
+}
+.modal img {
+  width: 100%;
+  border-radius: 8px;
+}
+.modal p {
+  margin-top: 10px;
+  text-align: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+  section h2 {
+    font-size: 1.2rem;
+  }
+}

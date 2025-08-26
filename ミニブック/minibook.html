@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ガチャガチャはじめました。</title>
+  <!-- 外部CSSをリンク -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>ガチャガチャはじめました。</h1>
+    <p>ガチャを購入してくれてありがとう！✨</p>
+  </header>
+  <nav>
+    <a href="#usage">景品の使い方</a>
+    <a href="#keychains">キーホルダー一覧</a>
+    <a href="#gallery">投稿ギャラリー</a>
+    <a href="#info">文化祭案内</a>
+    <a href="#team">製作者</a>
+  </nav>
+  <section id="usage">
+    <h2>🎁 景品の使い方</h2>
+    <p>名札やカバンにつけて、自分だけの特別なアクセサリーとして使ってね！</p>
+    <img src="images/nametag_example.jpg" alt="名札に付けた例">
+  </section>
+  <section id="keychains">
+    <h2>🔑 キーホルダー一覧</h2>
+    <div class="card-container">
+      <div class="card" onclick="openModal('images/keychain1.jpg', 'シンプルだけどスタイリッシュなデザイン！')">
+        <img src="images/keychain1.jpg" alt="角キーホルダー1">
+      </div>
+      <div class="card" onclick="openModal('images/keychain2.jpg', 'かわいらしいポップなデザイン！')">
+        <img src="images/keychain2.jpg" alt="角キーホルダー2">
+      </div>
+    </div>
+  </section>
+  <section id="gallery">
+    <h2>🖼 投稿ギャラリー</h2>
+    <p>みんなも自分の景品の写真を投稿してね！気軽にシェアして楽しもう！</p>
+  </section>
+  <section id="info">
+    <h2>🎉 文化祭案内</h2>
+    <p>文化祭のフロアマップ、セトリや物品情報はこちら！</p>
+    <img src="images/festival_map.jpg" alt="文化祭マップ">
+  </section>
+  <section id="team">
+    <h2>✍️ 製作者</h2>
+    <p>製作者一同：心を込めて作りました！</p>
+    <ul>
+      <li>名前1 - 「コメント1」</li>
+      <li>名前2 - 「コメント2」</li>
+      <li>名前3 - 「コメント3」</li>
+    </ul>
+  </section>
+  <div class="overlay" onclick="closeModal()"></div>
+  <div class="modal" id="modal">
+    <button class="close-btn" onclick="closeModal()">閉じる</button>
+    <img id="modal-image" src="" alt="詳細画像">
+    <p id="modal-description"></p>
+  </div>
+  <footer>
+    <p>© 2025 ガチャガチャプロジェクト. All Rights Reserved.</p>
+  </footer>
+  <!-- 外部JavaScriptをリンク -->
+  <script src="js/script.js"></script>
+</body>
+</html>
