@@ -1,17 +1,3 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>リダイレクト中...</title>
-  <meta http-equiv="refresh" content="0; URL=minibook.html">
-</head>
-<body>
-  <p>読み込み中... 自動的に移動しない場合は <a href="minibook.html">こちら</a> をクリックしてください。</p>
-</body>
-</html>
 <!-- minibook.html -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -20,6 +6,7 @@
   <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ガチャガチャはじめました。</title>
+  <link rel="icon" href="images/favicon_gacha.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -38,35 +25,42 @@
 
   <section id="usage">
     <h2>🎁 景品の使い方</h2>
-    <p>名札やカバンにつけて、自分だけの特別なアクセサリーとして使ってね！</p>
+    <p>名札やカバンにつけて、自分だけのアクセサリーとして使ってね！</p>
     <img src="images/nametag_example.jpg" alt="名札に付けた例">
   </section>
 
   <section id="keychains">
     <h2>🔑 キーホルダー一覧</h2>
     <div class="card-container">
-      <div class="card" onclick="openModal('images/keychain1.jpg', 'シンプルだけどスタイリッシュなデザイン！')">
+      <div class="card" onclick="openModal('images/keychain1.jpg', 'シンプルでかわいいデザイン！')">
         <img src="images/keychain1.jpg" alt="角キーホルダー1">
       </div>
-      <div class="card" onclick="openModal('images/keychain2.jpg', 'かわいらしいポップなデザイン！')">
+      <div class="card" onclick="openModal('images/keychain2.jpg', 'キラキラでおしゃれなデザイン！')">
         <img src="images/keychain2.jpg" alt="角キーホルダー2">
+      </div>
+      <div class="card" onclick="openModal('images/keychain2.jpg', 'レア!?ちょっとしかない他とは違ったデザイン！')">
+        <img src="images/keychain3.jpg" alt="角キーホルダー3">
       </div>
     </div>
   </section>
 
   <section id="info">
-    <h2>🎉 文化祭案内</h2>
-    <p>文化祭のフロアマップ、セトリや物品情報はこちら！</p>
-    <img src="images/festival_map.jpg" alt="文化祭マップ">
+    <h2>🎉 キャンフェス案内</h2>
+    <p>キャンフェスのフロアマップ、セトリや物品情報はこちら！</p>
+    <img src="images/festival_map.jpg" alt="キャンフェスマップ">
   </section>
 
   <section id="team">
     <h2>✍️ 製作者</h2>
     <p>製作者一同：心を込めて作りました！</p>
     <ul>
-      <li>名前1 - 「コメント1」</li>
-      <li>名前2 - 「コメント2」</li>
-      <li>名前3 - 「コメント3」</li>
+      <li> 脇坂 奏音- 「コメント1」</li>
+      <li> 小谷 梨緒 - 「コメント2」</li>
+      <li> 奈佐 綾音- 「コメント3」</li>
+      <li> 三木 弓月- 「コメント3」</li>
+      <li> 佐田 茜- 「コメント3」</li>
+      <li> 萩原 美紗葵- 「コメント3」</li>
+      <li> 国府田 杏渚- 「コメント3」</li>
     </ul>
   </section>
 
