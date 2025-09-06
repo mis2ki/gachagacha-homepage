@@ -9,3 +9,17 @@ function closeModal() {
   document.getElementById('modal').style.display = 'none';
   document.querySelector('.overlay').style.display = 'none';
 }
+
+// セクションのスクロール表示アニメーション
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+});

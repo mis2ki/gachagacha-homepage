@@ -1,10 +1,27 @@
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Maru Gothic', 'Yusei Magic', 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
-  background: url('../images/sky.jpg') no-repeat center center fixed;
+  background: url('../images/sky.jpg') repeat-x center center fixed;
   background-size: cover;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards, cloudScroll 60s linear infinite;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cloudScroll {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: 10000px center;
+  }
 }
 
 header {
@@ -16,6 +33,7 @@ header {
 }
 
 header h1 {
+  font-family: 'Yusei Magic', sans-serif;
   font-size: 2rem;
   margin: 0;
 }
@@ -36,11 +54,29 @@ nav a {
   text-decoration: none;
   margin: 0 15px;
   font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #004d99;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
   color: #005fbd;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
 }
 
 section {
@@ -50,9 +86,18 @@ section {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section h2 {
+  font-family: 'Yusei Magic', sans-serif;
   font-size: 1.5rem;
   color: #004d99;
   margin-bottom: 10px;
@@ -83,12 +128,26 @@ section img {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2px dashed #87ceeb;
+  box-shadow: 4px 4px 0 rgba(135, 206, 250, 0.4);
+  border-radius: 16px;
+
+
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
 }
 
 .overlay {
@@ -111,6 +170,18 @@ section img {
   z-index: 11;
   max-width: 90%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: modalFade 0.3s ease;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .modal img {
@@ -139,6 +210,7 @@ section img {
     font-size: 1.2rem;
   }
 }
+
 .festival-details {
   display: flex;
   flex-wrap: wrap;
@@ -172,4 +244,41 @@ section img {
   list-style: disc;
   color: #555;
   font-size: 0.95em;
+}
+/* ...既存のCSS... */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .card img {
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+  }
+  .modal {
+    width: 95vw;
+    max-width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .festival-details {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
