@@ -10,7 +10,6 @@ function closeModal() {
   document.querySelector('.overlay').style.display = 'none';
 }
 
-// セクションのスクロール表示アニメーション
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver((entries) => {
