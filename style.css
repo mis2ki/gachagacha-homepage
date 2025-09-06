@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: url('../images/sky.jpg') repeat-x center center fixed;
+  background: url('images/sky.jpg') repeat-x center center fixed;
   background-size: cover;
   opacity: 0;
   animation: fadeIn 1.2s ease forwards, cloudScroll 60s linear infinite;
@@ -135,8 +135,6 @@ section img {
   border: 2px dashed #87ceeb;
   box-shadow: 4px 4px 0 rgba(135, 206, 250, 0.4);
   border-radius: 16px;
-
-
 }
 
 .card:hover {
@@ -199,18 +197,6 @@ section img {
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  nav a {
-    font-size: 0.9rem;
-  }
-  section h2 {
-    font-size: 1.2rem;
-  }
-}
-
 .festival-details {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +231,18 @@ section img {
   color: #555;
   font-size: 0.95em;
 }
-/* ...既存のCSS... */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+  section h2 {
+    font-size: 1.2rem;
+  }
+}
 
 @media (max-width: 600px) {
   body {
