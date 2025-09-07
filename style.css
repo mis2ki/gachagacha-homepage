@@ -279,3 +279,18 @@ section img {
     gap: 12px;
   }
 }
+@media (max-width: 600px) {
+  section {
+    padding: 16px;
+    margin: 10px auto;
+    max-width: 90vw; /* ← ここがポイント！ */
+  }
+
+  .card-container {
+    gap: 12px;
+  }
+
+  .festival-card {
+    width: 90%;
+  }
+}
