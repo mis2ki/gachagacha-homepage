@@ -294,3 +294,12 @@ section img {
     width: 90%;
   }
 }
+a {
+  color: #004d99;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #005fbd;
+}
