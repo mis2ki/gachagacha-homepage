@@ -148,6 +148,10 @@ section img {
   border-radius: 6px;
 }
 
+/* 省略なしのCSSは長いため、前回Misakiが送ってくれたCSSに以下を追加・修正してね！ */
+
+/* 追加・修正ポイントだけ抜粋 */
+
 .overlay {
   display: none;
   position: fixed;
@@ -176,6 +180,10 @@ section img {
   overflow-y: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   animation: modalFade 0.3s ease;
+}
+
+.modal.active {
+  display: block;
 }
 
 @keyframes modalFade {
