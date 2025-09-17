@@ -160,27 +160,27 @@ section img {
 .modal {
   display: none;
   position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   background: white;
   padding: 20px;
   border-radius: 10px;
   z-index: 11;
   max-width: 90%;
+  max-height: 90vh; /* ← 高さ制限を追加！ */
+  overflow-y: auto;  /* ← スクロール可能に！ */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   animation: modalFade 0.3s ease;
 }
 
-@keyframes modalFade {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
+.modal img {
+  max-width: 100%;
+  max-height: 60vh; /* ← 画像の高さを制限！ */
+  height: auto;
+  margin-bottom: 10px;
 }
+
 
 .modal img {
   max-width: 100%;
