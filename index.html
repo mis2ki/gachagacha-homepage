@@ -35,7 +35,7 @@
         <img src="images/keychain1.jpg" alt="ノーマルキーホルダー">
         <p>ノーマルキーホルダー</p>
       </div>
-      <div class="card" onclick="openModal('images/keychain2_silver.jpg', 'キラキラ輝くシルバーグリッター！')">
+       <div class="card" onclick="openModal('images/keychain2_silver.jpg', 'キラキラ輝くシルバーグリッター！')">
         <img src="images/keychain2_silver.jpg" alt="グリッター（シルバー）キーホルダー">
         <p>グリッター（シルバー）キーホルダー</p>
       </div>
@@ -80,18 +80,15 @@
         </ul>
       </div>
     </div>
-    <p>
-  詳しくは <a href="https://tarutooo.github.io/campus-festival/" target="_blank" rel="noopener noreferrer">キャンパスホームページ</a> へ！
-</p>
+    <p>詳しくは <a href="https://tarutooo.github.io/campus-festival/" target="_blank" rel="noopener noreferrer">キャンパスホームページ</a> へ！</p>
   </section>
 
   <section id="team">
     <h2>✍️ 製作者</h2>
-
     <p>ガチャガチャ班 - ガチャガチャはじめました。</p>
   </section>
 
-  <div class="overlay" onclick="closeModal()"></div>
+  <div class="overlay" id="overlay" onclick="closeModal()"></div>
   <div class="modal" id="modal">
     <button class="close-btn" onclick="closeModal()">閉じる</button>
     <img id="modal-image" src="" alt="詳細画像">
@@ -105,3 +102,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
