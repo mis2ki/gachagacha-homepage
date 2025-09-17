@@ -181,6 +181,7 @@ section img {
   margin-bottom: 10px;
 }
 
+
 .close-btn {
   background: #004d99;
   color: white;
@@ -284,7 +285,7 @@ section img {
   }
 
   .festival-card {
-    width: 70%;
+    width: 90%;
   }
 }
 a {
