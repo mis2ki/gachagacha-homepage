@@ -337,4 +337,23 @@ a:hover {
     display: block;
     margin: 0 auto 10px;
   }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ← 2列表示に変更！ */
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
 }
